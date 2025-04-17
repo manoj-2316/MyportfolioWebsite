@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Kumar portfolio</title>
+    <link rel="Stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="submit.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+</head>
+
+<body>
+
+
+    <header class="header">
+        <a href="" class="logo"><span>Manoj</span>Kumar M</a>
+        <nav class="navbar">
+            <a href="#" class="active" >Portfolio</a>
+            <a href="education.html">Education</a>
+            <a href="certificate.html">Certification</a>
+            <a href="#">Projects</a>
+            <a href="achivements.html">Achivements</a>
+
+        </nav>
+
+        <a href="#contact-form" class="contact">Contact</a>
+
+    </header>
+
+
+
+
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>I'm <span>Manoj Kumar M<br></span>a Software Developer</h1>
+            <p>
+                A passionate CS graduate skilled in Java, Web Development, and problem-solving. Built real-world projects and cracked 1400+ coding challenges across platforms.
+              </p>
+              
+              
+            <div class="btn-box">
+                <a href="#contact-form"><button class="btn-1">Hire Me</button></a>
+                <a href="Manoj Kumar M.pdf" download class="resume-button"><button class="btn-2">Download resume</button></a>
+
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/share/1FCisCJWkb/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.linkedin.com/in/manoj-kumar-m-6b1782242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://github.com/manoj-2316" target="_blank"><i class='bx bxl-github'></i></i></a>
+                <a href="https://www.instagram.com/m_a_n_o_j__7?igsh=MWhleHdoZm4zZzBkdQ==" target="_blank"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        
+
+        </div>
+        <div class="img-box">
+            <img src="manojphoto.jpg" alt="">
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="about">
+        <div class="about-img">
+            <img src="Manojphoto2.jpg" alt="">
+
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software <span>Developer</span></h3>
+          
+                <p>
+                  I'm Manoj Kumar M, a dedicated and self-motivated Computer Science graduate from Sri Eshwar College of Engineering. I have a strong interest in software development, with solid skills in Java, SQL, and web technologies. I constantly strive to improve through hands-on learning and continuous problem-solving.
+                </p>
+                <p>
+                  With a passion for clean code and logical thinking, I’ve built a strong foundation in computer science fundamentals. I actively participate in coding challenges on platforms like Hackerrank, SkillRack, and LeetCode, sharpening my skills with over 1400+ problems solved.
+                </p>
+                <p>
+                  I’m a quick learner, detail-oriented, and always eager to take on new challenges that help me grow both technically and personally.
+                </p>
+            
+              
+        </div>
+
+    </section>
+
+
+
+    <section class="contact-form" id="contact-form">
+        <h2 class="contact-me">Contact <span>Me</span></h2>
+        <form id="contact-form1">
+            <div class="input-box">
+              <input type="text" name="fullname" placeholder="FullName" required>
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+          
+            <div class="input-box">
+              <input type="number" name="phone" placeholder="Phone Number" required>
+              <input type="text" name="subject" placeholder="Subject" required>
+            </div>
+          
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn-1">
+          </form>
+    </section>
+
+
+    <script>
+    (function(){
+        emailjs.init("0ejRs3WwX8w0JLb8a");
+      })();
+      
+      document.getElementById("contact-form1").addEventListener("submit", function(e) {
+        e.preventDefault();
+        emailjs.sendForm("service_9l6kquq", "template_9qzyn5p", this)
+          .then(() => {
+            alert("Message sent successfully!");
+            this.reset();
+          }, (error) => {
+            console.log("FAILED...", error);
+            alert("Failed to send. Try again.");
+          });
+      });
+
+      </script>
+</body>
+
+</html>
